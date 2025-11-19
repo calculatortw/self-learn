@@ -12,7 +12,8 @@ public class slimeAI : MonoBehaviour{
 
     void Start()
     {
-        status = Status.walk;
+        status = Status.idle;
+
         if (this.transform.GetComponent<SpriteRenderer>().flipX)
         {
             face = Face.Left;
@@ -22,6 +23,7 @@ public class slimeAI : MonoBehaviour{
             face = Face.Right;
         }
         myTransform = this.transform;
+        playerTransform = GameObject.Find("amongus1_0").transform;
     }
     void Update()
     {
@@ -29,17 +31,41 @@ public class slimeAI : MonoBehaviour{
         switch (status)
         {
             case Status.idle:
+            if (playerTransform)
+                {
+                    if (Mathf.Abs(myTransform.position.x - playerTransform.position.x) < 7f)
+                    {
+                        status = Status.walk;
+                    }
+                }
                 break;
             case Status.walk:
-            
+            if (playerTransform)
+                {
+                    if (myTransform.position.x >= playerTransform.position.x)
+                    {
+                        face = Face.Left;
+                    }
+                    else
+                    {
+                        face = Face.Right;
+                    }
+                }
                 switch (face)
                 {
                     case Face.Right:
-                        myTransform.position += new Vector3(speed*deltaTime,0,0);
+                        myTransform.position += new Vector3(speed * deltaTime, 0, 0);
                         break;
                     case Face.Left:
-                        myTransform.position -= new Vector3(speed*deltaTime,0,0);
+                        myTransform.position -= new Vector3(speed * deltaTime, 0, 0);
                         break;
+                }
+                if (playerTransform)
+                {
+                    if (Mathf.Abs(myTransform.position.x - playerTransform.position.x) >= 7f)
+                    {
+                        status = Status.idle;
+                    }
                 }
                 break;
         }

@@ -26,7 +26,7 @@ public class amongus : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            rigid2D.AddForce(new Vector2(0, 0.1f), ForceMode2D.Impulse);
+            rigid2D.AddForce(new Vector2(0, 0.05f), ForceMode2D.Impulse);
         }
     }
 }
