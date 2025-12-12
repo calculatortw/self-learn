@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class amongus : MonoBehaviour
 {
-    public float speed = 0.01f;
+    public float speed = 0.05f;
     Rigidbody2D rigid2D;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +26,8 @@ public class amongus : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            rigid2D.AddForce(new Vector2(0, 0.05f), ForceMode2D.Impulse);
+            //rigid2D.AddForce(new Vector2(0, 0.01f), ForceMode2D.Impulse);
+            this.gameObject.transform.position += new Vector3(0, 0.05f, 0);
         }
     }
 }
