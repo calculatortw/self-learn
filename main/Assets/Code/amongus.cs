@@ -18,16 +18,11 @@ public class amongus : MonoBehaviour
         //move
         if (Input.GetKey("d"))
         {
-            this.gameObject.transform.position += new Vector3(speed, 0, 0);
+            this.gameObject.transform.position += new Vector3(-speed, 0, 0);
         }
         if (Input.GetKey("a"))
         {
-            this.gameObject.transform.position += new Vector3(-speed, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            //rigid2D.AddForce(new Vector2(0, 0.01f), ForceMode2D.Impulse);
-            this.gameObject.transform.position += new Vector3(0, 0.05f, 0);
+            this.gameObject.transform.position += new Vector3(speed, 0, 0);
         }
     }
 }
