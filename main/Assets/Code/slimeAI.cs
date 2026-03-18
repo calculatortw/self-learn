@@ -33,7 +33,7 @@ public class slimeAI : MonoBehaviour{
             case Status.idle:
             if (playerTransform)
                 {
-                    if (Mathf.Abs(myTransform.position.x - playerTransform.position.x) < 7f)
+                    if (Mathf.Abs(myTransform.position.x - playerTransform.position.x) < 6f)
                     {
                         status = Status.walk;
                     }
@@ -62,7 +62,7 @@ public class slimeAI : MonoBehaviour{
                 }
                 if (playerTransform)
                 {
-                    if (Mathf.Abs(myTransform.position.x - playerTransform.position.x) >= 7f)
+                    if (Mathf.Abs(myTransform.position.x - playerTransform.position.x) >= 6f)
                     {
                         status = Status.idle;
                     }
