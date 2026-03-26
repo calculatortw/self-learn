@@ -1,0 +1,27 @@
+# Unity YAML files
+*.unity text eol=lf
+*.prefab text eol=lf
+*.asset text eol=lf
+*.meta text eol=lf
+*.mat text eol=lf
+*.anim text eol=lf
+*.controller text eol=lf
+
+# Scripts
+*.cs text eol=lf
+*.shader text eol=lf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.psd binary
+*.tga binary
+*.fbx binary
+*.mp4 binary
+*.wav binary
+*.mp3 binary
+
+# Default fallback
+* text=auto
