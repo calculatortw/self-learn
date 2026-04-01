@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 49532857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.27, y: -3.6, z: 0}
+  m_LocalPosition: {x: 8.27, y: -3.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -631,9 +631,10 @@ GameObject:
   m_Component:
   - component: {fileID: 872735180}
   - component: {fileID: 872735179}
+  - component: {fileID: 872735183}
   - component: {fileID: 872735178}
+  - component: {fileID: 872735184}
   - component: {fileID: 872735181}
-  - component: {fileID: 872735182}
   m_Layer: 0
   m_Name: slime_0
   m_TagString: Untagged
@@ -764,7 +765,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872735177}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da9b769cb309c4334a6b8280c656a108, type: 3}
   m_Name: 
@@ -773,7 +774,34 @@ MonoBehaviour:
   face: 0
   speed: 5
   playerTransform: {fileID: 0}
---- !u!114 &872735182
+--- !u!50 &872735183
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872735177}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &872735184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -785,11 +813,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05d8752bea944f9b9ed3aa8db334aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolPoints:
-  - {fileID: 49532858}
-  - {fileID: 1159325258}
+  PatrolPoints: []
   speed: 2
   PPDS: 0
+  playerTransform: {fileID: 0}
+  Chasing: 0
 --- !u!1 &1159325257
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,8 +843,8 @@ Transform:
   m_GameObject: {fileID: 1159325257}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.39, y: -3.48, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.39, y: -3.15, z: 0}
+  m_LocalScale: {x: 1, y: 1.0125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2305,7 +2333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340d28db795ffd448b9754f54628e4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.005
 --- !u!1 &1752078385
 GameObject:
   m_ObjectHideFlags: 0
