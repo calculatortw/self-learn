@@ -16,6 +16,10 @@ public class sword : MonoBehaviour
     void Update()
     {
         object0.transform.position = new Vector3(playertransform.position.x, playertransform.position.y, object0.transform.position.z);
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            transform.Rotate(0, 0, 3f);  
+        }
     }
 }
 

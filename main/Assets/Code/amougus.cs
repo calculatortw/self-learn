@@ -24,10 +24,12 @@ public class amougus : MonoBehaviour
         if (Input.GetKey("d"))
         {
             this.gameObject.transform.position += new Vector3(speed, 0, 0);
+            transform.localScale = new Vector3(4, 4, 0);
         }
         if (Input.GetKey("a"))
         {
             this.gameObject.transform.position += new Vector3(-speed, 0, 0);
+            transform.localScale = new Vector3(-4, 4, 0);
         }
     }
 }
