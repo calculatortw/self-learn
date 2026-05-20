@@ -7,7 +7,7 @@ public class spawner : MonoBehaviour
 {
     public GameObject Item;//生成項目
     public float SpawnTime;
-    private float cSpawnTime;
+    private float cSpawnTime;//current
     public bool Timer;
 
     void Start()
